@@ -377,136 +377,80 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 rounded-2xl p-8">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center">Admission and Enquiry Form</h3>
+                <div class="bg-gray-50 rounded-[2.5rem] p-10 border border-gray-100">
+                    <h2 class="text-3xl font-extrabold mb-10 text-center text-black">Admission and Enquiry Form</h2>
 
-                    <!-- Bitrix24 Form with Custom Styling -->
-                    <style>
-                        /* Bitrix Form Custom Styles */
-                        .b24-form-wrapper {
-                            background: transstakeholder !important;
-                            border: none !important;
-                            padding: 0 !important;
-                            box-shadow: none !important;
-                        }
+                    <form action="#" method="POST" class="space-y-6">
+                        <!-- Full Name -->
+                        <div>
+                            <input type="text" name="child_name" placeholder="Name of the Child *" required
+                                class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-gray-400 bg-white text-gray-700 font-medium placeholder-gray-400 transition-all">
+                        </div>
 
-                        .b24-form-header {
-                            display: none !important;
-                        }
+                        <!-- Date of Birth -->
+                        <div class="relative">
+                            <input type="text" name="dob" placeholder="Date of birth *" required
+                                onfocus="(this.type='date')" onblur="(this.type='text')"
+                                class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-gray-400 bg-white text-gray-700 font-medium placeholder-gray-400 transition-all">
+                        </div>
 
-                        .b24-form-field {
-                            margin-bottom: 24px !important;
-                        }
+                        <!-- Mobile Number -->
+                        <div>
+                            <input type="tel" name="mobile" placeholder="Mobile number *" required
+                                class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-gray-400 bg-white text-gray-700 font-medium placeholder-gray-400 transition-all">
+                        </div>
 
-                        /* Remove Bitrix auto separators */
-                        .b24-form-separator,
-                        .b24-form-field-separator,
-                        .b24-form-field::before,
-                        .b24-form-field::after {
-                            display: none !important;
-                            content: none !important;
-                            height: 0 !important;
-                            border: none !important;
-                        }
 
-                        /* Hide labels visually but keep for Bitrix logic */
-                        .b24-form-control-label {
-                            position: absolute !important;
-                            opacity: 0 !important;
-                            pointer-events: none !important;
-                        }
+                        <!-- Parent Name -->
+                        <div>
+                            <input type="text" name="parent_name" placeholder="Parent Name *" required
+                                class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-gray-400 bg-white text-gray-700 font-medium placeholder-gray-400 transition-all">
+                        </div>
 
-                        /* Input styling */
-                        .b24-form-control {
-                            width: 100% !important;
-                            background: #ffffff !important;
-                            border: 1px solid #dfe3e8 !important;
-                            border-radius: 14px !important;
-                            padding: 16px 18px !important;
-                            font-size: 15px !important;
-                            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-                            color: #111 !important;
-                            box-shadow: none !important;
-                        }
+                        <!-- Alternative Contact -->
+                        <div>
+                            <input type="tel" name="alt_mobile" placeholder="Alternative Contact No *" required
+                                class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-gray-400 bg-white text-gray-700 font-medium placeholder-gray-400 transition-all">
+                        </div>
 
-                        .b24-form-control::placeholder {
-                            color: #9aa0a6 !important;
-                            font-weight: 400;
-                        }
+                        <!-- Address -->
+                        <div>
+                            <input type="text" name="address" placeholder="Address *" required
+                                class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-gray-400 bg-white text-gray-700 font-medium placeholder-gray-400 transition-all">
+                        </div>
 
-                        .b24-form-control:focus {
-                            border-color: #111 !important;
-                            outline: none !important;
-                        }
+                        <!-- Institution Selection -->
+                        <div class="relative">
+                            <select name="institution" required
+                                class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-gray-400 bg-white text-gray-700 font-medium appearance-none transition-all text-sm">
+                                <option value="" disabled selected>Select Institution *</option>
+                                <option value="SNS College of Technology">SNS College of Technology</option>
+                                <option value="SNS College of Engineering">SNS College of Engineering</option>
+                                <option value="SNS Academy">SNS Academy</option>
+                                <option value="SNS College of Allied Health Sciences">SNS College of Allied Health
+                                    Sciences</option>
+                                <option value="SNS College of Pharmacy">SNS College of Pharmacy</option>
+                                <option value="SNS College of Nursing">SNS College of Nursing</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-6 flex items-center pointer-events-none">
+                                <i class="fas fa-chevron-down text-gray-400 text-sm"></i>
+                            </div>
+                        </div>
 
-                        /* Dropdown styling */
-                        .b24-form-dropdown {
-                            border-radius: 14px !important;
-                            border: 1px solid #fcfcfc !important;
-                            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12) !important;
-                        }
+                        <!-- Submit Button -->
+                        <div class="pt-4 text-center">
+                            <button type="submit"
+                                class="w-full bg-[#f04e23] hover:bg-[#d8431e] text-white py-5 rounded-[2rem] font-bold text-xl transition-all shadow-lg active:scale-95">
+                                Call me!!!
+                            </button>
+                        </div>
 
-                        .b24-form-dropdown-item {
-                            padding: 14px 18px !important;
-                            font-size: 15px !important;
-                            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-                        }
-
-                        .b24-form-dropdown-item:hover {
-                            background: #f5f6f8 !important;
-                        }
-
-                        /* Submit button */
-                        .b24-form-btn {
-                            width: 100% !important;
-                            margin-top: 28px !important;
-                            padding: 18px !important;
-                            border-radius: 16px !important;
-                            background: #E31E24 !important;
-                            color: #fff !important;
-                            font-size: 18px !important;
-                            font-weight: 600 !important;
-                            border: none !important;
-                            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-                            cursor: pointer !important;
-                            transition: all 0.3s ease !important;
-                        }
-
-                        .b24-form-btn:hover {
-                            background: #d43d1f !important;
-                            transform: translateY(-1px);
-                        }
-
-                        /* Footer text */
-                        .b24-form-sign {
-                            margin-top: 20px !important;
-                            font-size: 13px !important;
-                            color: #9aa0a6 !important;
-                        }
-                    </style>
-
-                    <script data-b24-form="inline/18/m4ecvi" data-skip-moving="true">
-                        (function (w, d, u) {
-                            var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 180000 | 0);
-                            var h = d.getElementsByTagName('script')[0]; h.stakeholderNode.insertBefore(s, h);
-                        })(window, document, 'https://cdn.bitrix24.com/b11752903/crm/form/loader_18.js');
-                    </script>
-
-                    <script>
-                        /* Placeholder + Asterisk Fix */
-                        setTimeout(function () {
-                            document.querySelectorAll('.b24-form-field').forEach(function (field) {
-                                const label = field.querySelector('.b24-form-control-label');
-                                const input = field.querySelector('.b24-form-control');
-
-                                if (label && input) {
-                                    let text = label.textContent.replace(/\s*\*$/, '').trim();
-                                    let required = label.textContent.includes('*');
-                                    input.placeholder = required ? text + ' *' : text;
-                                }
-                            });
-                        }, 500);
-                    </script>
+                        <!-- Report Abuse Link -->
+                        <div class="mt-8 flex items-center justify-start space-x-2 text-[10px] text-gray-400">
+                            <a href="#" class="hover:underline border-b border-gray-200 pb-0.5">Report abuse</a>
+                            <i class="far fa-question-circle text-xs"></i>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
