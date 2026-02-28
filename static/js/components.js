@@ -55,7 +55,6 @@ headerTemplate.innerHTML = `
                                 <div class="px-2">
                                     <a href="/programs/ug.html" class="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-gray-700 hover:text-[#E31E24] hover:bg-gray-50 rounded-lg transition-colors">
                                         <span>UG Programs</span>
-                                        <i class="fas fa-arrow-right text-[10px] opacity-50 group-hover:translate-x-1 transition-transform"></i>
                                     </a>
                                 </div>
 
@@ -63,7 +62,13 @@ headerTemplate.innerHTML = `
                                 <div class="px-2">
                                     <a href="/programs/pg.html" class="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-gray-700 hover:text-[#E31E24] hover:bg-gray-50 rounded-lg transition-colors">
                                         <span>PG Programs</span>
-                                        <i class="fas fa-arrow-right text-[10px] opacity-50 group-hover:translate-x-1 transition-transform"></i>
+                                    </a>
+                                </div>
+
+                                <!-- Ph.D. Programs Link -->
+                                <div class="px-2">
+                                    <a href="/programs/phd.html" class="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-gray-700 hover:text-[#E31E24] hover:bg-gray-50 rounded-lg transition-colors">
+                                        <span>Ph.D. Programs</span>
                                     </a>
                                 </div>
                                 </div>
@@ -143,6 +148,7 @@ headerTemplate.innerHTML = `
                     <div id="mobile-programs" class="hidden pl-4 space-y-2 mt-2">
                         <a href="/programs/ug.html" class="block text-gray-600 hover:text-[#E31E24] font-medium py-2">UG Programs</a>
                         <a href="/programs/pg.html" class="block text-gray-600 hover:text-[#E31E24] font-medium py-2">PG Programs</a>
+                        <a href="/programs/phd.html" class="block text-gray-600 hover:text-[#E31E24] font-medium py-2">Ph.D. Programs</a>
                     </div>
                 </div>
 
